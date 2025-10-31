@@ -10,7 +10,7 @@ function Upload() {
     data.append("username", form.username);
     data.append("caption", form.caption);
     data.append("image", form.image);
-    await axios.post("https://mern-insta-backend.onrender.com/api/posts", data);
+    await axios.post("https://post-backend-wwh9.onrender.com/api/posts", data);
     window.location.reload();
   };
 
