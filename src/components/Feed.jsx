@@ -5,14 +5,14 @@ function Feed() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const res = await axios.get("https://mern-insta-backend.onrender.com/api/posts");
+    const res = await axios.get("https://post-backend-wwh9.onrender.com/api/posts");
     setPosts(res.data);
   };
 
   useEffect(() => { fetchPosts(); }, []);
 
   const handleLike = async (id) => {
-    await axios.post(`https://mern-insta-backend.onrender.com/api/posts/${id}/like`);
+    await axios.post(`https://post-backend-wwh9.onrender.com/api/posts/${id}/like`);
     fetchPosts();
   };
 
@@ -30,7 +30,7 @@ function Feed() {
         >
           <h3>@{post.username}</h3>
           <img
-            src={`https://mern-insta-backend.onrender.com${post.image}`}
+            src={`//https://post-backend-wwh9.onrender.com${post.image}`}
             alt="post"
             style={{ width: "100%", borderRadius: "10px" }}
           />
