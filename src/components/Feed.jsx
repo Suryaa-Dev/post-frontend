@@ -30,8 +30,8 @@ function Feed() {
         >
           <h3>@{post.username}</h3>
           <img
-            src={`https://post-backend-wwh9.onrender.com${post.image}`}
-            alt="post"
+            src={`${post.image}`}
+            alt="couldnt get img"
             style={{ width: "100%", borderRadius: "10px" }}
           />
           <p>{post.caption}</p>
